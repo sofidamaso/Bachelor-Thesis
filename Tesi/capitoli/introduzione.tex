@@ -1,0 +1,24 @@
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Introduzione}
+\chapter*{Introduzione}
+\markboth{Introduzione}{}
+L'obiettivo di questa esperienza di stage, svoltasi in remoto presso l'Ateneo, è stata l'analisi di un dataset di immagini relative a cibi e la loro classificazione estetica.
+
+% i quali possono essere considerati esteticamente belli o meno e, successivamente, la creazione e l'analisi di un dataset con 100 nuove immagini.
+
+Il linguaggio utilizzato per lo sviluppo di codice è stato interamente MATLAB \cite{MATLAB}, poiché è stato il linguaggio con cui mi sono approcciata all'elaborazione delle immagini nell'omonimo corso e, per questo motivo, è stato più semplice per me prendere spunto da ciò che era stato visto a lezione e a laboratorio per approcciarmi al problema dell'estetica.
+
+Il tema dell'estetica è molto particolare in quanto, come verrà approfondito nel Capitolo~\ref{estetica}, questa caratteristica dipende fortemente da chi osserva ma può e potrà essere sfruttata per l'analisi automatica di fotografie in svariati ambiti e in svariate applicazioni. In questa relazione ci si è concentrati sul cibo poiché anche in questa categoria di immagini è molto utile uno studio a livello estetico, ad esempio per il marketing e la pubblicità di ristoranti, e sarebbe utile che questa analisi possa essere svolta in maniera automatica. 
+
+Il lavoro svolto durante l'esperienza di stage è stato articolato nelle seguenti parti:
+\begin{enumerate}
+    \item \textbf{Implementazione dei descrittori hand-crafted}. É stato scritto il codice MATLAB per estrarre dal dataset iniziale delle feature semplici, ad esempio quelle relative a colore e texture, ed è stato utilizzato un classificatore per conoscere l'accuratezza di classificazione con questi descrittori.
+    \item \textbf{Implementazione dell'estrazione dei descrittori da una rete neurale}. È stata scelta una rete neurale da cui sono state estratte delle feature con un livello di astrazione maggiore rispetto alle precedenti e, usando lo stesso classificatore del punto precedente, è stato calcolato il livello di accuratezza raggiunto.
+    \item \textbf{Utilizzo di una rete neurale per l'intero task}. È stata usata una rete neurale per l'intera fase di classificazione. La rete in questione era preaddestrata per svolgere un altro compito, ma è stato eseguito un Fine Tuning, ovvero una modifica di determinati layer per poterla adattare all'analisi delle immagini in questione.
+    \item \textbf{Creazione di un nuovo dataset e raccolta dati}. È stato proposto un nuovo dataset di immagini grazie all'aiuto di un fotografo professionista, le quali sono state valutate da 41 utenti e successivamente da un sottoinsieme di 11 di essi al fine di comprendere come una persona valuti l'estetica e su cosa si basi per questa valutazione.
+    \item \textbf{Analisi dei risultati ottenuti e degli errori}. Sono stati fatti diversi ragionamenti sui risultati ottenuti dalle due valutazioni degli utenti ed è stato utilizzato un metodo per visualizzare le parti dell'immagine più significative per la rete neurale durante la predizione della label, in modo tale da osservare eventuali concordanze tra le label assegnate dagli utenti e le predizioni automatiche.
+\end{enumerate}
+
+L'ultima fase del lavoro, ovvero l'analisi dei risultati e di ciò che ha portato la rete neurale a compiere una determinata predizione, è stata la fase più utile e interessante in quanto ha permesso di comprendere a fondo il ragionamento alla base delle predizioni. Questo è molto significativo poiché trovare le motivazioni dietro a un avvenimento è stato alla base della scelta di questa esperienza di stage e, in maniera più estesa, alla base della scelta di questo percorso universitario.
+

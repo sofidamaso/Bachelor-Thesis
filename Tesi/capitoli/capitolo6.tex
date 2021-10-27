@@ -1,0 +1,24 @@
+\chapter{Conclusioni e sviluppi futuri}
+\label{sviluppi}
+
+\begin{comment}
+\begin{itemize}
+\item riportare parte dell'intro, spiegando l'obiettivo 
+\item immagini negative più semplici da valutare, su quelle positive c'è più discordanza tra gli utenti
+\item si conferma che l'estetica è una caratteristica molto soggettiva e piuttosto complessa da descrivere con dei modelli
+\item ipotetici sviluppi futuri: possibile ampliamento del mio dataset e ampliamento dei 41 utenti, i quali dovranno anche motivare le risposte in modo più esaustivo possibile, in modo tale da avere più opinioni così come è stato fatto nel Paper \cite{sheng2021learning}
+\end{itemize}
+\end{comment}
+
+La relazione si è basata sul lavoro svolto durante l'esperienza di stage presso l'Ateneo, il cui obiettivo è stato in primo luogo l'analisi di un dataset di immagini di cibo già esistente. Il dataset in questione è il Gourmet Photography Dataset o GPD \cite{sheng2021learning}, il quale contiene 24000 immagini di cibi con le relative label, le quali possono appartenere alla classe positiva o alla classe negativa a seconda della valutazione estetica della singola immagine.
+
+Si è scelto di utilizzare diverse feature con grado di astrazione e difficoltà crescente, partendo dalle feature hand-crafted e arrivando fino all'uso di una rete neurale, opportunamente modificata e adattata, per l'intera classificazione delle immagini del dataset. Lo sviluppo di codice per l'intero lavoro è stato in linguaggio MATLAB \cite{MATLAB}.
+
+Successivamente è stato proposto un dataset creato ad hoc per sperimentare l'utilizzo di una rete neurale appositamente adattata e osservare i risultati ottenuti, confrontandoli con quelli conseguiti con il dataset già esistente. In particolare ci si è poi concentrati sullo studio di ciò che la rete considerava più importante per determinare la label predetta, ovvero una tematica molto interessante e che permette di capire il ragionamento alla base delle valutazioni compiute dalla rete neurale.
+
+A seguito delle analisi svolte durante l'esperienza di stage sul dataset proposto si è osservato che gli utenti tendono a valutare positivamente le immagini, anche se queste fotografie non sono professionali, concentrandosi soprattutto sul cibo e non sulla tecnica fotografica. Inoltre, come già si ipotizzava dopo aver studiato altri lavori \cite{sheng2021learning} già esistenti sul tema dell'estetica dei cibi, si è confermato che l'utilizzo delle reti neurali ottiene migliori performance rispetto all'utilizzo di descrittori più semplici combinati con un classificatore.
+
+Per quanto riguarda i possibili sviluppi di questa ricerca si potrebbe ipotizzare un sostanziale ampliamento del dataset proposto, portandone la numerosità delle immagini a livelli pari di altri dataset famosi come il GPD, e un ampliamento della popolazione che, tramite il primo dei due questionari, ha fornito le valutazioni delle immagini per determinare le groundtruth utilizzate.  Di pari passo con questo ampliamento verrebbe ampliata anche la popolazione che è stata richiamata per completare un secondo questionario, il cui obiettivo era raccogliere le motivazioni degli utenti a seguito della valutazione di ogni singola immagine.
+L'incremento del numero di utenti coinvolti potrebbe essere particolarmente significativo, in quanto maggiore è il numero di persone che valutano le immagini più sarà possibile osservare il comportamento di esse ed eventualmente modificare la raccolta delle groundtruth o la valutazione delle immagini stesse.
+
+Un possibile sviluppo più a lungo termine potrebbe essere l'integrazione di questo studio in un'applicazione che, data una fotografia di cibo, ne dia una valutazione estetica e fornisca delle motivazioni relative ad essa, in modo tale che ristoranti e chiunque fotografi il cibo possa comprendere se, di fronte a un'immagine valutata negativamente, il problema sia relativo alla fotografia in sé oppure sia legato alla presentazione del cibo. Ciò potrebbe essere utile nell'ottica di creare fotografie non professionali per i social network di un ristorante, un bar oppure semplicemente per chi ama scattare fotografie a ciò che mangia per pubblicarle. Scattare velocemente una foto ed eventualmente applicare qualche filtro di color correction direttamente dallo smartphone, caricarla nell'app e ottenere la valutazione potrebbe essere un processo rapido e semplice prima della pubblicazione di tale fotografia e potrebbe aiutare soprattutto chi usa i social network a livello commerciale per comprendere se l'immagine finale può essere adatta al proprio pubblico su un determinato social network, dato che online gli utenti vengono attirati da fotografie colorate, con contrasti, giochi di luce particolari e, nel caso del cibo, che siano ben strutturate per mostrare qualcosa di appetitoso.
